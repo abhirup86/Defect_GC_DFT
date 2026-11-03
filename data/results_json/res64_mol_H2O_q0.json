@@ -1,0 +1,38 @@
+{
+  "system": "mol",
+  "config": "H2O",
+  "q": 0,
+  "ecut": 340,
+  "kpts": [
+    1,
+    1,
+    1
+  ],
+  "a_lattice": null,
+  "natoms": 3,
+  "formula": "H2O",
+  "initial_magmoms_total": 0.0,
+  "E_initial": -9.90311541226003,
+  "relaxed": false,
+  "E": -9.90311541226003,
+  "magmom": -1.7936379385110464e-15,
+  "magmoms_local": [
+    0.0,
+    -0.0,
+    -0.0
+  ],
+  "fermi": -5.41289861368776,
+  "nelec": 8.0,
+  "eigs_near_ef": [
+    -7.084
+  ],
+  "eigs_gamma": {
+    "0": [
+      -7.084
+    ],
+    "1": [
+      -7.084
+    ]
+  },
+  "walltime_s": 14.6
+}

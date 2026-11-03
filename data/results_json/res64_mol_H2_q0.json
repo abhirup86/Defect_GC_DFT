@@ -1,0 +1,31 @@
+{
+  "system": "mol",
+  "config": "H2",
+  "q": 0,
+  "ecut": 340,
+  "kpts": [
+    1,
+    1,
+    1
+  ],
+  "a_lattice": null,
+  "natoms": 2,
+  "formula": "H2",
+  "initial_magmoms_total": 0.0,
+  "E_initial": -6.646933414463141,
+  "relaxed": false,
+  "E": -6.646933414463141,
+  "magmom": 2.839572113981558e-15,
+  "magmoms_local": [
+    -0.0,
+    0.0
+  ],
+  "fermi": -4.739133723575268,
+  "nelec": 2.0,
+  "eigs_near_ef": [],
+  "eigs_gamma": {
+    "0": [],
+    "1": []
+  },
+  "walltime_s": 6.3
+}

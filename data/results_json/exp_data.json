@@ -1,0 +1,24 @@
+{
+  "_note": "Experimental reference values gathered from literature (see refs). Used ONLY for comparison, never to tune DFT.",
+  "bulk": {
+    "Si":     {"a_Ang": 5.431, "B_GPa": 97.8,  "Eg_eV": 1.17, "Eg_note": "indirect, low-T"},
+    "3C-SiC": {"a_Ang": 4.360, "B_GPa": 250.0, "Eg_eV": 2.36, "Eg_note": "indirect"},
+    "4H-SiC": {"a_Ang": 3.073, "B_GPa": 220.0, "Eg_eV": 3.26, "Eg_note": "c=10.05 A; indirect"}
+  },
+  "Si_VHn_LVM_cm": {
+    "VH":  [2068],
+    "VH2": [2121, 2144],
+    "VH3": [2166, 2191],
+    "VH4": [2222],
+    "source": "Bech Nielsen et al. (FTIR); stretch modes increase with n"
+  },
+  "Si_vacancy_levels": {
+    "V(0/+)":  {"ref": "Ev", "eV": 0.05},
+    "V(+/2+)": {"ref": "Ev", "eV": 0.13},
+    "note": "Anderson negative-U; donor levels in lower gap (Watkins & Troxell 1980)"
+  },
+  "SiC_VC_levels_4H": {
+    "Z1/2 (2-/0)": {"ref": "Ec", "eV": -0.65, "note": "negative-U, carbon vacancy, Son 2012"},
+    "EH6/7":       {"ref": "Ec", "eV": -1.5,  "note": "V_C (+/0) and (1-/2-)"}
+  }
+}

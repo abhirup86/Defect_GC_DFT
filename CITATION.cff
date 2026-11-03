@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the article."
+title: "Charge state and hydration of vacancies in silicon and silicon carbide in contact with water: data and code"
+authors:
+  - family-names: Patra
+    given-names: Abhirup
+license: MIT
+repository-code: "https://github.com/abhirup86/Defect_GC_DFT"
+preferred-citation:
+  type: article
+  title: "Charge state and hydration of vacancies in silicon and silicon carbide in contact with water: A grand-canonical first-principles stability map"
+  authors:
+    - family-names: Patra
+      given-names: Abhirup
+  journal: "Computational Materials Science"
+  year: 2026
+  notes: "Submitted"

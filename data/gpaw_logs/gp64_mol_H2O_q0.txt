@@ -1,0 +1,293 @@
+  __  _  _
+ | _ |_)|_||  |
+ |__||  | ||/\| - 26.7.0
+
+User:   abhiruppatra@Abhirups-MacBook-M1-Pro.local
+Date:   Tue Sep  1 23:30:58 2026
+Arch:   arm64
+Pid:    79321
+CWD:    /Users/abhiruppatra/gpaw_si_defect
+units:  Angstrom and eV
+cores:  1
+OpenMP: False
+
+Versions:
+  Python: 3.11.15
+  ASE:    3.29.0
+  Numpy:  2.4.6
+  Scipy:  1.17.1
+  Libxc:  7.0.0
+
+Paths:
+  gpaw:  /opt/anaconda3/envs/gpaw-run/lib/python3.11/site-packages/gpaw
+  _gpaw: /opt/anaconda3/envs/gpaw-run/lib/python3.11/site-packages/
+        _gpaw.cpython-311-darwin.so
+  ase:   /opt/anaconda3/envs/gpaw-run/lib/python3.11/site-packages/ase
+  numpy: /opt/anaconda3/envs/gpaw-run/lib/python3.11/site-packages/numpy
+  scipy: /opt/anaconda3/envs/gpaw-run/lib/python3.11/site-packages/scipy
+
+Git-hashes:
+
+OMP_NUM_THREADS: 1
+
+
+Environment variables:
+  GPAW_CPUPY:          False
+  GPAW_DEBUG:          False
+  GPAW_MPI_BACKEND:    serial
+  GPAW_MPI_OPTIONS:    None
+  GPAW_NO_C_EXTENSION: False
+  GPAW_NO_GPU_MPI:     False
+  GPAW_TRACE:          False
+  GPAW_USE_GPUS:       False
+
+Input parameters:
+  mode=PW(ecut=340.0),
+  charge=0.0,
+  convergence={'energy': 0.0001, 'density': 0.0001},
+  kpts=MonkhorstPack(size=array([1, 1, 1])),
+  occupations=Occupations(name='fermi-dirac', width=0.05, fixmagmom=False),
+  spinpol=True,
+  symmetry=Symmetry(point_group=False, time_reversal=False),
+  xc=XC(name='PBE')
+
+Diagonalizing LCAO Hamiltonian
+Converting LCAO to pw mode
+        .------------------------.  
+       /|                        |  
+      / |                        |  
+     /  |                        |  
+    /   |                        |  
+   /    |                        |  
+  /     |                        |  
+ *      |                        |  
+ |      |                        |  
+ |      |                        |  
+ |      |        O               |  
+ |      |        H               |  
+ |      |                        |  
+ |      .------------------------.  
+ |     /                        /   
+ |    /                        /    
+ |   /                        /     
+ |  /                        /      
+ | /                        /       
+ |/                        /        
+ *------------------------*         
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      O | 5.000000 | 5.763239 | 5.596309 | ( 0.0000,  0.0000,  0.0000) |
+| 1 |      H | 5.000000 | 6.526478 | 5.000000 | ( 0.0000,  0.0000,  0.0000) |
+| 2 |      H | 5.000000 | 5.000000 | 5.000000 | ( 0.0000,  0.0000,  0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 11.526478 |  0.000000 | 11.526478 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.596309 | 10.596309 | 90.000000 |
+
+
+Number of symmetries: 1
+Symmetry operations  # r_c * U_cc + t_c -> r_c
+|   | kind |            matrix            |
+|---|------|------------------------------|
+| 0 |  E   |  1, 0, 0,  0, 1, 0,  0, 0, 1 |
+
+BZ-sampling:
+  Number of BZ points: 1
+  Number of IBZ points: 1
+
+  Monkhorst-Pack size: [1, 1, 1]
+  Monkhorst-Pack shift: [0, 0, 0]
+
+K-points  # in reciprocal-cell coordinates
+|   |                                coordinates |     weight |
+|---|--------------------------------------------|------------|
+| 0 | (  0.00000000,   0.00000000,   0.00000000) | 1.00000000 |
+
+Plane wave coefficients: 8652
+Cutoff: 340.0 eV
+
+Spin-components: 2 (collinear spins)
+Bands:           6
+Projectors:      11
+Spin-degeneracy: 1
+Datatype:        float64
+
+Memory:
+  Storage: CPU
+  Wave functions: 1_661_184 bytes (1_661_184 per core)
+  Projectors: 2_768_640 bytes (2_768_640 per core)
+
+Parallelization:
+  kpt:    1
+  domain: 1
+  band:   1
+
+Density:
+  Valence electrons: 8.0
+  Components: 2
+  Grid points: [45 50 48]
+  Charge: 0.0  # |e|
+
+Potential:
+  Grid points: [45 50 48]
+
+species:
+  O:
+    name:    Oxygen
+    id:      32ecd46bf208036f09c70b0ec9a88b78
+    Z:       8.0
+    valence: 6
+    core:    2
+    charge:  0.0  # [|e|]
+    file:    /opt/anaconda3/envs/gpaw-run/lib/python3.11/site-packages/gpaw_data/setups/O.PBE.gz
+    compensation charges:
+      type: gauss
+      rc: 0.21  # [Å]
+      lmax: 2
+    cutoffs:
+      filter: 1.17  # [Å]
+      core: 0.83  # [Å]
+    projectors
+    | kind |    occ | energy [eV] | rcut [Å] |
+    |------|--------|-------------|----------|
+    |   2s |  2.000 |     -23.961 |    0.688 |
+    |   2p |  4.000 |      -9.029 |    0.598 |
+    |    s |        |       3.251 |    0.688 |
+    |    p |        |      18.182 |    0.598 |
+    |    d |        |       0.000 |    0.619 |
+  
+    Using partial waves for O as LCAO basis
+
+  H:
+    name:    Hydrogen
+    id:      d65de229564ff8ea4db303e23b6d1ecf
+    Z:       1.0
+    valence: 1
+    core:    0
+    charge:  0.0  # [|e|]
+    file:    /opt/anaconda3/envs/gpaw-run/lib/python3.11/site-packages/gpaw_data/setups/H.PBE.gz
+    compensation charges:
+      type: gauss
+      rc: 0.15  # [Å]
+      lmax: 2
+    cutoffs:
+      filter: 0.85  # [Å]
+      core: 0.53  # [Å]
+    projectors
+    | kind |    occ | energy [eV] | rcut [Å] |
+    |------|--------|-------------|----------|
+    |   1s |  1.000 |      -6.494 |    0.476 |
+    |    s |        |      20.717 |    0.476 |
+    |    p |        |       0.000 |    0.476 |
+  
+    Using partial waves for H as LCAO basis
+
+Reference energy: -2065.832626  # eV
+
+eigensolver:
+  PPCG
+  Converge bands: occupied
+  niter=2
+  
+density mixing:
+  MSR1-Mixer
+  Pratt-step length: 0.05
+  Maximum mixing coefficient: 0.75
+  Old densities: 10
+  SVD Regularization: 0.005
+  Good broyden scale: 1.0
+  Trust region scale: 1.0
+  Backstep threshold: 4.0
+  History deletion threshold: 6.0
+  Fourier metric: weight=20.0, sigma=0.015
+  
+occupation numbers:
+  Fermi-Dirac:
+    width: 0.0500  # eV
+  
+
+poisson solver:
+  ecut: 2720.0  # eV
+
+xc functional:
+  name: PBE with 2 nearest neighbor stencil
+
+Initialization done in: 1.060 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 0.0001 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 0.0001 electrons / valence electron
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |  magmom |
+|---------|----------|-------------|-------|-------|---------|
+|iter:   1| 23:31:00 |  -11.020340 | +0.30 |       |  +0.0000|
+|iter:   2| 23:31:01 |  -10.804771 | -1.45 | -0.71 |  -0.0000|
+|iter:   3| 23:31:02 |   -9.923015 | -0.61 | -0.75 |  -0.0000|
+|iter:   4| 23:31:03 |   -9.903782 | -1.92 | -1.29 |  +0.0000|
+|iter:   5| 23:31:04 |   -9.902848 | -2.25 | -1.77 |  -0.0000|
+|iter:   6| 23:31:05 |   -9.903146 | -3.33 | -2.35 |  -0.0000|
+|iter:   7| 23:31:07 |   -9.903115c| -4.35 | -2.67 |  -0.0000|
+|iter:   8| 23:31:08 |   -9.903115c| -5.06 | -3.44 |  -0.0000|
+|iter:   9| 23:31:10 |   -9.903115c| -6.44 | -3.84 |  -0.0000|
+|iter:  10| 23:31:11 |   -9.903115c| -7.18 | -4.26c|  -0.0000|
+|iter:  11| 23:31:13 |   -9.903115c| -7.48c| -4.82c|  -0.0000|
+
+Converged in 11 steps
+SCF loop duration: 13.534 s (1.230 s/step)
+Energy contributions relative to reference atoms: (reference = -2065.832626)
+
+Energy contributions:
+  Kinetic:          -4.150094
+  Coulomb:           5.500165
+  Zero:             -0.124301
+  External:          0.000000
+  Xc:              -11.128886
+  Entropy:          -0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -9.903115
+  Extrapolated:     -9.903115
+
+dipole moment: (0.000001, 0.000001, -0.359322)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, -0.000000)
+
+Local magnetic moments
+|        x |        y |         z |
+|----------|----------|-----------|
+| 0.000000 | 0.000000 |  0.000000 |  # O    0
+| 0.000000 | 0.000000 | -0.000000 |  # H    1
+| 0.000000 | 0.000000 | -0.000000 |  # H    2
+
+
+
+Fermi level: -5.413
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -25.923 |     1.000 |       -25.923 |     1.000 |
+|          1 |       -12.983 |     1.000 |       -12.983 |     1.000 |
+|          2 |        -9.340 |     1.000 |        -9.340 |     1.000 |
+|          3 |        -7.084 |     1.000 |        -7.084 |     1.000 |
+|          4 |        -0.979 |     0.000 |        -0.979 |     0.000 |
+|          5 |         0.542 |     0.000 |         0.542 |     0.000 |
+
+
+Gap: 6.105 eV
+Transition (v -> c):
+  (s=0, k=0, n=3, [0.00, 0.00, 0.00]) -> (s=0, k=0, n=4, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+timing:  # [seconds]
+  Total: 14.656  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Init:   1.060  # ━━━━
+  SCF:   13.534  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸

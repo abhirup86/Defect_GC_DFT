@@ -1,0 +1,1696 @@
+  __  _  _
+ | _ |_)|_||  |
+ |__||  | ||/\| - 26.7.0
+
+User:   abhiruppatra@Abhirups-MacBook-M1-Pro.local
+Date:   Thu Oct 22 11:23:14 2026
+Arch:   arm64
+Pid:    86362
+CWD:    /Users/abhiruppatra/gpaw_si_defect
+units:  Angstrom and eV
+cores:  1
+OpenMP: False
+
+Versions:
+  Python: 3.11.15
+  ASE:    3.29.0
+  Numpy:  2.4.6
+  Scipy:  1.17.1
+  Libxc:  7.0.0
+
+Paths:
+  gpaw:  /opt/anaconda3/envs/gpaw-run/lib/python3.11/site-packages/gpaw
+  _gpaw: /opt/anaconda3/envs/gpaw-run/lib/python3.11/site-packages/
+        _gpaw.cpython-311-darwin.so
+  ase:   /opt/anaconda3/envs/gpaw-run/lib/python3.11/site-packages/ase
+  numpy: /opt/anaconda3/envs/gpaw-run/lib/python3.11/site-packages/numpy
+  scipy: /opt/anaconda3/envs/gpaw-run/lib/python3.11/site-packages/scipy
+
+Git-hashes:
+
+OMP_NUM_THREADS: 1
+
+
+Environment variables:
+  GPAW_CPUPY:          False
+  GPAW_DEBUG:          False
+  GPAW_MPI_BACKEND:    serial
+  GPAW_MPI_OPTIONS:    None
+  GPAW_NO_C_EXTENSION: False
+  GPAW_NO_GPU_MPI:     False
+  GPAW_TRACE:          False
+  GPAW_USE_GPUS:       False
+
+Input parameters:
+  mode=PW(ecut=340.0),
+  convergence={'energy': 1e-06, 'density': 1e-06, 'forces': 0.0001},
+  kpts=MonkhorstPack(size=array([1, 1, 1])),
+  occupations=Occupations(name='fermi-dirac', width=0.05, fixmagmom=False),
+  spinpol=True,
+  symmetry=Symmetry(point_group=False, time_reversal=False),
+  xc=XC(name='PBE')
+
+Diagonalizing LCAO Hamiltonian
+Converting LCAO to pw mode
+       .------------------------.  
+      /|                        |  
+     / |                        |  
+    /  |                        |  
+   /   |                        |  
+  /    |                        |  
+ *     |                        |  
+ |     |                        |  
+ |     |                        |  
+ |     |         H              |  
+ |     |         H              |  
+ |     |                        |  
+ |     |                        |  
+ |     .------------------------.  
+ |    /                        /   
+ |   /                        /    
+ |  /                        /     
+ | /                        /      
+ |/                        /       
+ *------------------------*        
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      H | 5.000000 | 5.000000 | 5.737166 | ( 0.0000,  0.0000,  0.0000) |
+| 1 |      H | 5.000000 | 5.000000 | 5.000000 | ( 0.0000,  0.0000,  0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 10.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.737166 | 10.737166 | 90.000000 |
+
+
+Number of symmetries: 1
+Symmetry operations  # r_c * U_cc + t_c -> r_c
+|   | kind |            matrix            |
+|---|------|------------------------------|
+| 0 |  E   |  1, 0, 0,  0, 1, 0,  0, 0, 1 |
+
+BZ-sampling:
+  Number of BZ points: 1
+  Number of IBZ points: 1
+
+  Monkhorst-Pack size: [1, 1, 1]
+  Monkhorst-Pack shift: [0, 0, 0]
+
+K-points  # in reciprocal-cell coordinates
+|   |                                coordinates |     weight |
+|---|--------------------------------------------|------------|
+| 0 | (  0.00000000,   0.00000000,   0.00000000) | 1.00000000 |
+
+Plane wave coefficients: 7643
+Cutoff: 340.0 eV
+
+Spin-components: 2 (collinear spins)
+Bands:           2
+Projectors:      6
+Spin-degeneracy: 1
+Datatype:        float64
+
+Memory:
+  Storage: CPU
+  Wave functions: 489_152 bytes (489_152 per core)
+  Projectors: 1_100_592 bytes (1_100_592 per core)
+
+Parallelization:
+  kpt:    1
+  domain: 1
+  band:   1
+
+Density:
+  Valence electrons: 2.0
+  Components: 2
+  Grid points: [45 45 48]
+  Charge: 0.0  # |e|
+
+Potential:
+  Grid points: [45 45 48]
+
+species:
+  H:
+    name:    Hydrogen
+    id:      d65de229564ff8ea4db303e23b6d1ecf
+    Z:       1.0
+    valence: 1
+    core:    0
+    charge:  0.0  # [|e|]
+    file:    /opt/anaconda3/envs/gpaw-run/lib/python3.11/site-packages/gpaw_data/setups/H.PBE.gz
+    compensation charges:
+      type: gauss
+      rc: 0.15  # [Å]
+      lmax: 2
+    cutoffs:
+      filter: 0.85  # [Å]
+      core: 0.53  # [Å]
+    projectors
+    | kind |    occ | energy [eV] | rcut [Å] |
+    |------|--------|-------------|----------|
+    |   1s |  1.000 |      -6.494 |    0.476 |
+    |    s |        |      20.717 |    0.476 |
+    |    p |        |       0.000 |    0.476 |
+  
+    Using partial waves for H as LCAO basis
+
+Reference energy: -24.980324  # eV
+
+eigensolver:
+  PPCG
+  Converge bands: occupied
+  niter=2
+  
+density mixing:
+  MSR1-Mixer
+  Pratt-step length: 0.05
+  Maximum mixing coefficient: 0.75
+  Old densities: 10
+  SVD Regularization: 0.005
+  Good broyden scale: 1.0
+  Trust region scale: 1.0
+  Backstep threshold: 4.0
+  History deletion threshold: 6.0
+  Fourier metric: weight=20.0, sigma=0.015
+  
+occupation numbers:
+  Fermi-Dirac:
+    width: 0.0500  # eV
+  
+
+poisson solver:
+  ecut: 2720.0  # eV
+
+xc functional:
+  name: PBE with 2 nearest neighbor stencil
+
+Initialization done in: 1.881 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 1e-06 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 1e-06 electrons / valence electron
+- Maximum change in the atomic [forces] across last 2 cycles: 0.0001 eV/Ang OR
+Maximum error relative to the maximum force is below inf
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |force |  magmom |
+|---------|----------|-------------|-------|-------|------|---------|
+|iter:   1| 11:23:16 |   -7.273069 | +1.03 |       |      |  +0.0000|
+|iter:   2| 11:23:17 |   -7.220379 | -1.01 | -0.39 |      |  +0.0000|
+|iter:   3| 11:23:19 |   -6.639817 | -0.79 | -0.42 |      |  +0.0000|
+|iter:   4| 11:23:21 |   -6.644402 | -2.31 | -1.16 |      |  +0.0000|
+|iter:   5| 11:23:22 |   -6.646934 | -3.60 | -1.53 |      |  -0.0000|
+|iter:   6| 11:23:24 |   -6.646933 | -5.23 | -2.74 |      |  -0.0000|
+|iter:   7| 11:23:25 |   -6.646933c| -7.23 | -3.73 |      |  +0.0000|
+|iter:   8| 11:23:27 |   -6.646933c| -7.55c| -4.35 |      |  +0.0000|
+|iter:   9| 11:23:29 |   -6.646933c| -8.10c| -5.24 |      |  -0.0000|
+|iter:  10| 11:23:30 |   -6.646933c| -8.22c| -5.92 |      |  -0.0000|
+|iter:  11| 11:23:33 |   -6.646933c| -7.80c| -6.21c|      |  -0.0000|
+|iter:  12| 11:23:35 |   -6.646933c| -9.03c| -6.24c|-5.43c|  -0.0000|
+
+Converged in 12 steps
+SCF loop duration: 18.889 s (1.574 s/step)
+Energy contributions relative to reference atoms: (reference = -24.980324)
+
+Energy contributions:
+  Kinetic:           6.323987
+  Coulomb:          -7.882547
+  Zero:             -0.006199
+  External:          0.000000
+  Xc:               -5.082174
+  Entropy:          -0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -6.646933
+  Extrapolated:     -6.646933
+
+dipole moment: (-0.000000, 0.000000, 0.000000)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, -0.000000)
+
+Local magnetic moments
+|        x |        y |         z |
+|----------|----------|-----------|
+| 0.000000 | 0.000000 | -0.000000 |  # H    0
+| 0.000000 | 0.000000 | -0.000000 |  # H    1
+
+
+
+Fermi level: -4.739
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -10.349 |     1.000 |       -10.349 |     1.000 |
+|          1 |         0.360 |     0.000 |         0.360 |     0.000 |
+
+
+Gap: 10.708 eV
+Transition (v -> c):
+  (s=0, k=0, n=0, [0.00, 0.00, 0.00]) -> (s=1, k=0, n=1, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+Forces  # eV/Ang
+|        x |        y |        z |
+|----------|----------|----------|
+| -0.00001 | -0.00000 |  0.60792 |  # H    0
+| -0.00001 | -0.00000 | -0.60792 |  # H    1
+
+
+Force computation time: 0.000  # s
+       .------------------------.  
+      /|                        |  
+     / |                        |  
+    /  |                        |  
+   /   |                        |  
+  /    |                        |  
+ *     |                        |  
+ |     |                        |  
+ |     |                        |  
+ |     |        H               |  
+ |     |        H               |  
+ |     |                        |  
+ |     |                        |  
+ |     .------------------------.  
+ |    /                        /   
+ |   /                        /    
+ |  /                        /     
+ | /                        /      
+ |/                        /       
+ *------------------------*        
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      H | 5.000000 | 5.000000 | 5.745851 | ( 0.0000,  0.0000, -0.0000) |
+| 1 |      H | 5.000000 | 5.000000 | 4.991315 | ( 0.0000,  0.0000, -0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 10.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.737166 | 10.737166 | 90.000000 |
+
+
+Initialization done in: 1.542 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 1e-06 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 1e-06 electrons / valence electron
+- Maximum change in the atomic [forces] across last 2 cycles: 0.0001 eV/Ang OR
+Maximum error relative to the maximum force is below inf
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |force |  magmom |
+|---------|----------|-------------|-------|-------|------|---------|
+|iter:   1| 11:23:36 |   -6.653986 | -2.90 |       |      |  +0.0000|
+|iter:   2| 11:23:38 |   -6.653758 | -4.97 | -1.99 |      |  +0.0000|
+|iter:   3| 11:23:39 |   -6.652452 | -3.76 | -2.01 |      |  +0.0000|
+|iter:   4| 11:23:41 |   -6.652128 | -3.99 | -2.29 |      |  +0.0000|
+|iter:   5| 11:23:43 |   -6.652122 | -6.38 | -2.62 |      |  +0.0000|
+|iter:   6| 11:23:44 |   -6.652122 | -7.51c| -3.41 |      |  +0.0000|
+|iter:   7| 11:23:46 |   -6.652122c| -8.12c| -4.52 |      |  +0.0000|
+|iter:   8| 11:23:48 |   -6.652122c| -8.93c| -4.90 |      |  -0.0000|
+|iter:   9| 11:23:50 |   -6.652122c| -8.77c| -6.38c|-0.22 |  -0.0000|
+|iter:  10| 11:23:52 |   -6.652122c| -8.29c| -6.44c|-5.09c|  +0.0000|
+
+Converged in 10 steps
+SCF loop duration: 15.685 s (1.569 s/step)
+Energy contributions relative to reference atoms: (reference = -24.980324)
+
+Energy contributions:
+  Kinetic:           5.881633
+  Coulomb:          -7.593682
+  Zero:             -0.006384
+  External:          0.000000
+  Xc:               -4.933689
+  Entropy:          -0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -6.652122
+  Extrapolated:     -6.652122
+
+dipole moment: (0.000000, 0.000000, 0.000000)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, 0.000000)
+
+Local magnetic moments
+|        x |        y |        z |
+|----------|----------|----------|
+| 0.000000 | 0.000000 | 0.000000 |  # H    0
+| 0.000000 | 0.000000 | 0.000000 |  # H    1
+
+
+
+Fermi level: -4.739
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -10.265 |     1.000 |       -10.265 |     1.000 |
+|          1 |         0.310 |     0.000 |         0.310 |     0.000 |
+
+
+Gap: 10.575 eV
+Transition (v -> c):
+  (s=1, k=0, n=0, [0.00, 0.00, 0.00]) -> (s=1, k=0, n=1, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+Forces  # eV/Ang
+|       x |        y |        z |
+|---------|----------|----------|
+| 0.00000 | -0.00001 |  0.00093 |  # H    0
+| 0.00000 | -0.00001 | -0.00093 |  # H    1
+
+
+Force computation time: 0.000  # s
+       .------------------------.  
+      /|                        |  
+     / |                        |  
+    /  |                        |  
+   /   |                        |  
+  /    |                        |  
+ *     |                        |  
+ |     |                        |  
+ |     |                        |  
+ |     |        H               |  
+ |     |        H               |  
+ |     |                        |  
+ |     |                        |  
+ |     .------------------------.  
+ |    /                        /   
+ |   /                        /    
+ |  /                        /     
+ | /                        /      
+ |/                        /       
+ *------------------------*        
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      H | 4.990000 | 5.000000 | 5.745851 | ( 0.0000,  0.0000,  0.0000) |
+| 1 |      H | 5.000000 | 5.000000 | 4.991315 | ( 0.0000,  0.0000,  0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 10.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.737166 | 10.737166 | 90.000000 |
+
+
+Initialization done in: 1.451 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 1e-06 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 1e-06 electrons / valence electron
+- Maximum change in the atomic [forces] across last 2 cycles: 0.0001 eV/Ang OR
+Maximum error relative to the maximum force is below inf
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |force |  magmom |
+|---------|----------|-------------|-------|-------|------|---------|
+|iter:   1| 11:23:53 |   -6.652152 | -3.30 |       |      |  +0.0000|
+|iter:   2| 11:23:55 |   -6.652149 | -5.45 | -2.40 |      |  +0.0000|
+|iter:   3| 11:23:57 |   -6.652127 | -5.40 | -2.42 |      |  +0.0000|
+|iter:   4| 11:23:58 |   -6.652124 | -5.77 | -2.86 |      |  +0.0000|
+|iter:   5| 11:24:00 |   -6.652124 | -7.71c| -3.76 |      |  +0.0000|
+|iter:   6| 11:24:02 |   -6.652124c| -8.72c| -4.17 |      |  -0.0000|
+|iter:   7| 11:24:03 |   -6.652124c| -9.85c| -5.55 |      |  -0.0000|
+|iter:   8| 11:24:05 |   -6.652124c|-10.42c| -6.14c|-2.65 |  -0.0000|
+|iter:   9| 11:24:07 |   -6.652124c|-11.27c| -6.62c|-5.21c|  +0.0000|
+
+Converged in 9 steps
+SCF loop duration: 13.744 s (1.527 s/step)
+Energy contributions relative to reference atoms: (reference = -24.980324)
+
+Energy contributions:
+  Kinetic:           5.880016
+  Coulomb:          -7.592617
+  Zero:             -0.006384
+  External:          0.000000
+  Xc:               -4.933139
+  Entropy:          -0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -6.652124
+  Extrapolated:     -6.652124
+
+dipole moment: (-0.000001, 0.000000, -0.000000)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, 0.000000)
+
+Local magnetic moments
+|        x |        y |         z |
+|----------|----------|-----------|
+| 0.000000 | 0.000000 |  0.000000 |  # H    0
+| 0.000000 | 0.000000 | -0.000000 |  # H    1
+
+
+
+Fermi level: -4.739
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -10.265 |     1.000 |       -10.265 |     1.000 |
+|          1 |         0.309 |     0.000 |         0.309 |     0.000 |
+
+
+Gap: 10.574 eV
+Transition (v -> c):
+  (s=1, k=0, n=0, [0.00, 0.00, 0.00]) -> (s=0, k=0, n=1, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+Forces  # eV/Ang
+|        x |        y |        z |
+|----------|----------|----------|
+| -0.00042 | -0.00000 | -0.00128 |  # H    0
+| -0.00014 | -0.00000 |  0.00129 |  # H    1
+
+
+Force computation time: 0.000  # s
+       .------------------------.  
+      /|                        |  
+     / |                        |  
+    /  |                        |  
+   /   |                        |  
+  /    |                        |  
+ *     |                        |  
+ |     |                        |  
+ |     |                        |  
+ |     |         H              |  
+ |     |        H               |  
+ |     |                        |  
+ |     |                        |  
+ |     .------------------------.  
+ |    /                        /   
+ |   /                        /    
+ |  /                        /     
+ | /                        /      
+ |/                        /       
+ *------------------------*        
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      H | 5.010000 | 5.000000 | 5.745851 | ( 0.0000,  0.0000,  0.0000) |
+| 1 |      H | 5.000000 | 5.000000 | 4.991315 | ( 0.0000,  0.0000, -0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 10.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.737166 | 10.737166 | 90.000000 |
+
+
+Initialization done in: 1.510 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 1e-06 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 1e-06 electrons / valence electron
+- Maximum change in the atomic [forces] across last 2 cycles: 0.0001 eV/Ang OR
+Maximum error relative to the maximum force is below inf
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |force |  magmom |
+|---------|----------|-------------|-------|-------|------|---------|
+|iter:   1| 11:24:09 |   -6.652236 | -2.70 |       |      |  -0.0000|
+|iter:   2| 11:24:10 |   -6.652225 | -4.85 | -2.10 |      |  -0.0000|
+|iter:   3| 11:24:12 |   -6.652136 | -4.82 | -2.12 |      |  -0.0000|
+|iter:   4| 11:24:14 |   -6.652124 | -5.12 | -2.53 |      |  -0.0000|
+|iter:   5| 11:24:15 |   -6.652124 | -7.08 | -3.43 |      |  -0.0000|
+|iter:   6| 11:24:17 |   -6.652124c| -8.08c| -3.82 |      |  +0.0000|
+|iter:   7| 11:24:19 |   -6.652124c| -9.08c| -5.07 |      |  -0.0000|
+|iter:   8| 11:24:20 |   -6.652124c| -9.66c| -5.73 |      |  -0.0000|
+|iter:   9| 11:24:22 |   -6.652124c|-10.51c| -6.17c|-3.08 |  +0.0000|
+|iter:  10| 11:24:24 |   -6.652124c|-11.14c| -6.46c|-5.24c|  +0.0000|
+
+Converged in 10 steps
+SCF loop duration: 15.946 s (1.595 s/step)
+Energy contributions relative to reference atoms: (reference = -24.980324)
+
+Energy contributions:
+  Kinetic:           5.880016
+  Coulomb:          -7.592617
+  Zero:             -0.006384
+  External:          0.000000
+  Xc:               -4.933139
+  Entropy:          -0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -6.652124
+  Extrapolated:     -6.652124
+
+dipole moment: (0.000001, 0.000000, -0.000000)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, 0.000000)
+
+Local magnetic moments
+|        x |        y |         z |
+|----------|----------|-----------|
+| 0.000000 | 0.000000 |  0.000000 |  # H    0
+| 0.000000 | 0.000000 | -0.000000 |  # H    1
+
+
+
+Fermi level: -4.739
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -10.265 |     1.000 |       -10.265 |     1.000 |
+|          1 |         0.001 |     0.000 |        -0.171 |     0.000 |
+
+
+Gap: 10.094 eV
+Transition (v -> c):
+  (s=0, k=0, n=0, [0.00, 0.00, 0.00]) -> (s=1, k=0, n=1, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+Forces  # eV/Ang
+|       x |        y |        z |
+|---------|----------|----------|
+| 0.00042 | -0.00000 | -0.00129 |  # H    0
+| 0.00014 | -0.00000 |  0.00129 |  # H    1
+
+
+Force computation time: 0.000  # s
+       .------------------------.  
+      /|                        |  
+     / |                        |  
+    /  |                        |  
+   /   |                        |  
+  /    |                        |  
+ *     |                        |  
+ |     |                        |  
+ |     |                        |  
+ |     |        H               |  
+ |     |        H               |  
+ |     |                        |  
+ |     |                        |  
+ |     .------------------------.  
+ |    /                        /   
+ |   /                        /    
+ |  /                        /     
+ | /                        /      
+ |/                        /       
+ *------------------------*        
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      H | 5.000000 | 4.990000 | 5.745851 | ( 0.0000,  0.0000,  0.0000) |
+| 1 |      H | 5.000000 | 5.000000 | 4.991315 | ( 0.0000,  0.0000, -0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 10.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.737166 | 10.737166 | 90.000000 |
+
+
+Initialization done in: 1.437 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 1e-06 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 1e-06 electrons / valence electron
+- Maximum change in the atomic [forces] across last 2 cycles: 0.0001 eV/Ang OR
+Maximum error relative to the maximum force is below inf
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |force |  magmom |
+|---------|----------|-------------|-------|-------|------|---------|
+|iter:   1| 11:24:26 |   -6.652180 | -3.02 |       |      |  -0.0000|
+|iter:   2| 11:24:28 |   -6.652174 | -5.18 | -2.26 |      |  -0.0000|
+|iter:   3| 11:24:29 |   -6.652129 | -5.09 | -2.28 |      |  -0.0000|
+|iter:   4| 11:24:31 |   -6.652124 | -5.49 | -2.72 |      |  -0.0000|
+|iter:   5| 11:24:32 |   -6.652124 | -7.43c| -3.55 |      |  -0.0000|
+|iter:   6| 11:24:34 |   -6.652124c| -8.42c| -3.97 |      |  +0.0000|
+|iter:   7| 11:24:36 |   -6.652124c| -9.38c| -5.18 |      |  +0.0000|
+|iter:   8| 11:24:37 |   -6.652124c| -9.90c| -5.81 |      |  -0.0000|
+|iter:   9| 11:24:40 |   -6.652124c|-10.65c| -6.23c|-3.23 |  +0.0000|
+|iter:  10| 11:24:42 |   -6.652124c|-11.17c| -6.70c|-5.61c|  +0.0000|
+
+Converged in 10 steps
+SCF loop duration: 15.878 s (1.588 s/step)
+Energy contributions relative to reference atoms: (reference = -24.980324)
+
+Energy contributions:
+  Kinetic:           5.880016
+  Coulomb:          -7.592617
+  Zero:             -0.006384
+  External:          0.000000
+  Xc:               -4.933139
+  Entropy:          -0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -6.652124
+  Extrapolated:     -6.652124
+
+dipole moment: (-0.000000, -0.000001, -0.000000)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, 0.000000)
+
+Local magnetic moments
+|        x |        y |         z |
+|----------|----------|-----------|
+| 0.000000 | 0.000000 |  0.000000 |  # H    0
+| 0.000000 | 0.000000 | -0.000000 |  # H    1
+
+
+
+Fermi level: -4.739
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -10.265 |     1.000 |       -10.265 |     1.000 |
+|          1 |        -0.171 |     0.000 |        -0.171 |     0.000 |
+
+
+Gap: 10.094 eV
+Transition (v -> c):
+  (s=0, k=0, n=0, [0.00, 0.00, 0.00]) -> (s=1, k=0, n=1, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+Forces  # eV/Ang
+|        x |        y |        z |
+|----------|----------|----------|
+|  0.00000 | -0.00042 | -0.00129 |  # H    0
+| -0.00000 | -0.00014 |  0.00129 |  # H    1
+
+
+Force computation time: 0.000  # s
+       .------------------------.  
+      /|                        |  
+     / |                        |  
+    /  |                        |  
+   /   |                        |  
+  /    |                        |  
+ *     |                        |  
+ |     |                        |  
+ |     |                        |  
+ |     |         H              |  
+ |     |        H               |  
+ |     |                        |  
+ |     |                        |  
+ |     .------------------------.  
+ |    /                        /   
+ |   /                        /    
+ |  /                        /     
+ | /                        /      
+ |/                        /       
+ *------------------------*        
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      H | 5.000000 | 5.010000 | 5.745851 | ( 0.0000,  0.0000,  0.0000) |
+| 1 |      H | 5.000000 | 5.000000 | 4.991315 | ( 0.0000,  0.0000, -0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 10.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.737166 | 10.737166 | 90.000000 |
+
+
+Initialization done in: 1.522 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 1e-06 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 1e-06 electrons / valence electron
+- Maximum change in the atomic [forces] across last 2 cycles: 0.0001 eV/Ang OR
+Maximum error relative to the maximum force is below inf
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |force |  magmom |
+|---------|----------|-------------|-------|-------|------|---------|
+|iter:   1| 11:24:43 |   -6.652235 | -2.73 |       |      |  +0.0000|
+|iter:   2| 11:24:45 |   -6.652225 | -4.83 | -2.10 |      |  +0.0000|
+|iter:   3| 11:24:47 |   -6.652133 | -4.78 | -2.12 |      |  +0.0000|
+|iter:   4| 11:24:49 |   -6.652124 | -5.19 | -2.56 |      |  +0.0000|
+|iter:   5| 11:24:50 |   -6.652124 | -7.00 | -3.35 |      |  +0.0000|
+|iter:   6| 11:24:52 |   -6.652124c| -8.00c| -3.79 |      |  -0.0000|
+|iter:   7| 11:24:54 |   -6.652124c| -8.55c| -4.69 |      |  -0.0000|
+|iter:   8| 11:24:56 |   -6.652124c| -9.09c| -5.33 |      |  -0.0000|
+|iter:   9| 11:24:57 |   -6.652124c| -9.81c| -5.71 |      |  +0.0000|
+|iter:  10| 11:24:59 |   -6.652124c|-10.12c| -6.09c|-3.07 |  +0.0000|
+|iter:  11| 11:25:02 |   -6.652124c|-10.49c| -6.48c|-5.70c|  +0.0000|
+
+Converged in 11 steps
+SCF loop duration: 18.308 s (1.664 s/step)
+Energy contributions relative to reference atoms: (reference = -24.980324)
+
+Energy contributions:
+  Kinetic:           5.880016
+  Coulomb:          -7.592617
+  Zero:             -0.006384
+  External:          0.000000
+  Xc:               -4.933139
+  Entropy:          -0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -6.652124
+  Extrapolated:     -6.652124
+
+dipole moment: (-0.000000, 0.000001, 0.000000)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, 0.000000)
+
+Local magnetic moments
+|        x |        y |         z |
+|----------|----------|-----------|
+| 0.000000 | 0.000000 | -0.000000 |  # H    0
+| 0.000000 | 0.000000 |  0.000000 |  # H    1
+
+
+
+Fermi level: -4.739
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -10.265 |     1.000 |       -10.265 |     1.000 |
+|          1 |        -0.171 |     0.000 |        -0.171 |     0.000 |
+
+
+Gap: 10.094 eV
+Transition (v -> c):
+  (s=1, k=0, n=0, [0.00, 0.00, 0.00]) -> (s=1, k=0, n=1, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+Forces  # eV/Ang
+|        x |       y |        z |
+|----------|---------|----------|
+| -0.00000 | 0.00042 | -0.00129 |  # H    0
+| -0.00000 | 0.00014 |  0.00128 |  # H    1
+
+
+Force computation time: 0.000  # s
+       .------------------------.  
+      /|                        |  
+     / |                        |  
+    /  |                        |  
+   /   |                        |  
+  /    |                        |  
+ *     |                        |  
+ |     |                        |  
+ |     |                        |  
+ |     |        H               |  
+ |     |        H               |  
+ |     |                        |  
+ |     |                        |  
+ |     .------------------------.  
+ |    /                        /   
+ |   /                        /    
+ |  /                        /     
+ | /                        /      
+ |/                        /       
+ *------------------------*        
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      H | 5.000000 | 5.000000 | 5.735851 | ( 0.0000,  0.0000, -0.0000) |
+| 1 |      H | 5.000000 | 5.000000 | 4.991315 | ( 0.0000,  0.0000,  0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 10.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.737166 | 10.737166 | 90.000000 |
+
+
+Initialization done in: 1.483 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 1e-06 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 1e-06 electrons / valence electron
+- Maximum change in the atomic [forces] across last 2 cycles: 0.0001 eV/Ang OR
+Maximum error relative to the maximum force is below inf
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |force |  magmom |
+|---------|----------|-------------|-------|-------|------|---------|
+|iter:   1| 11:25:03 |   -6.651103 | -2.97 |       |      |  +0.0000|
+|iter:   2| 11:25:05 |   -6.651021 | -4.98 | -2.07 |      |  +0.0000|
+|iter:   3| 11:25:06 |   -6.650508 | -4.02 | -2.10 |      |  +0.0000|
+|iter:   4| 11:25:08 |   -6.650427 | -4.57 | -2.48 |      |  +0.0000|
+|iter:   5| 11:25:09 |   -6.650426 | -6.03 | -2.94 |      |  +0.0000|
+|iter:   6| 11:25:11 |   -6.650426c| -7.70c| -3.89 |      |  +0.0000|
+|iter:   7| 11:25:13 |   -6.650426c| -7.63c| -4.44 |      |  +0.0000|
+|iter:   8| 11:25:14 |   -6.650426c| -8.50c| -5.20 |      |  -0.0000|
+|iter:   9| 11:25:16 |   -6.650426c| -9.29c| -5.64 |      |  +0.0000|
+|iter:  10| 11:25:18 |   -6.650426c| -9.90c| -6.45c|-0.46 |  -0.0000|
+|iter:  11| 11:25:20 |   -6.650426c| -9.25c| -6.78c|-5.70c|  +0.0000|
+
+Converged in 11 steps
+SCF loop duration: 17.057 s (1.551 s/step)
+Energy contributions relative to reference atoms: (reference = -24.980324)
+
+Energy contributions:
+  Kinetic:           6.133897
+  Coulomb:          -7.759334
+  Zero:             -0.006281
+  External:          0.000000
+  Xc:               -5.018707
+  Entropy:          -0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -6.650426
+  Extrapolated:     -6.650426
+
+dipole moment: (0.000000, 0.000000, 0.000001)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, 0.000000)
+
+Local magnetic moments
+|        x |        y |         z |
+|----------|----------|-----------|
+| 0.000000 | 0.000000 |  0.000000 |  # H    0
+| 0.000000 | 0.000000 | -0.000000 |  # H    1
+
+
+
+Fermi level: -4.739
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -10.313 |     1.000 |       -10.313 |     1.000 |
+|          1 |        -0.170 |     0.000 |        -0.170 |     0.000 |
+
+
+Gap: 10.143 eV
+Transition (v -> c):
+  (s=0, k=0, n=0, [0.00, 0.00, 0.00]) -> (s=0, k=0, n=1, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+Forces  # eV/Ang
+|       x |       y |        z |
+|---------|---------|----------|
+| 0.00000 | 0.00000 |  0.34202 |  # H    0
+| 0.00000 | 0.00000 | -0.34204 |  # H    1
+
+
+Force computation time: 0.000  # s
+       .------------------------.  
+      /|                        |  
+     / |                        |  
+    /  |                        |  
+   /   |                        |  
+  /    |                        |  
+ *     |                        |  
+ |     |                        |  
+ |     |                        |  
+ |     |        H               |  
+ |     |        H               |  
+ |     |                        |  
+ |     |                        |  
+ |     .------------------------.  
+ |    /                        /   
+ |   /                        /    
+ |  /                        /     
+ | /                        /      
+ |/                        /       
+ *------------------------*        
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      H | 5.000000 | 5.000000 | 5.755851 | ( 0.0000,  0.0000,  0.0000) |
+| 1 |      H | 5.000000 | 5.000000 | 4.991315 | ( 0.0000,  0.0000, -0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 10.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.737166 | 10.737166 | 90.000000 |
+
+
+Initialization done in: 1.562 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 1e-06 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 1e-06 electrons / valence electron
+- Maximum change in the atomic [forces] across last 2 cycles: 0.0001 eV/Ang OR
+Maximum error relative to the maximum force is below inf
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |force |  magmom |
+|---------|----------|-------------|-------|-------|------|---------|
+|iter:   1| 11:25:22 |   -6.653058 | -2.59 |       |      |  +0.0000|
+|iter:   2| 11:25:24 |   -6.652751 | -4.43 | -1.83 |      |  +0.0000|
+|iter:   3| 11:25:26 |   -6.650809 | -3.40 | -1.85 |      |  +0.0000|
+|iter:   4| 11:25:27 |   -6.650523 | -4.02 | -2.24 |      |  +0.0000|
+|iter:   5| 11:25:29 |   -6.650515 | -5.34 | -2.63 |      |  +0.0000|
+|iter:   6| 11:25:30 |   -6.650515 | -6.82 | -3.53 |      |  +0.0000|
+|iter:   7| 11:25:32 |   -6.650515c| -7.83c| -4.14 |      |  -0.0000|
+|iter:   8| 11:25:34 |   -6.650515c| -8.70c| -4.86 |      |  -0.0000|
+|iter:   9| 11:25:35 |   -6.650515c| -8.72c| -5.29 |      |  +0.0000|
+|iter:  10| 11:25:37 |   -6.650515c| -8.86c| -5.97 |      |  +0.0000|
+|iter:  11| 11:25:39 |   -6.650515c|-10.03c| -6.43c|-0.18 |  +0.0000|
+|iter:  12| 11:25:41 |   -6.650515c| -9.75c| -6.74c|-5.49c|  -0.0000|
+
+Converged in 12 steps
+SCF loop duration: 19.443 s (1.620 s/step)
+Energy contributions relative to reference atoms: (reference = -24.980324)
+
+Energy contributions:
+  Kinetic:           5.635739
+  Coulomb:          -7.429852
+  Zero:             -0.006479
+  External:          0.000000
+  Xc:               -4.849924
+  Entropy:          -0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -6.650515
+  Extrapolated:     -6.650515
+
+dipole moment: (-0.000000, -0.000000, -0.000001)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, -0.000000)
+
+Local magnetic moments
+|        x |        y |         z |
+|----------|----------|-----------|
+| 0.000000 | 0.000000 |  0.000000 |  # H    0
+| 0.000000 | 0.000000 | -0.000000 |  # H    1
+
+
+
+Fermi level: -4.739
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -10.218 |     1.000 |       -10.218 |     1.000 |
+|          1 |        -0.172 |     0.000 |        -0.172 |     0.000 |
+
+
+Gap: 10.046 eV
+Transition (v -> c):
+  (s=1, k=0, n=0, [0.00, 0.00, 0.00]) -> (s=1, k=0, n=1, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+Forces  # eV/Ang
+|       x |        y |        z |
+|---------|----------|----------|
+| 0.00000 | -0.00000 | -0.31882 |  # H    0
+| 0.00000 | -0.00000 |  0.31885 |  # H    1
+
+
+Force computation time: 0.000  # s
+       .------------------------.  
+      /|                        |  
+     / |                        |  
+    /  |                        |  
+   /   |                        |  
+  /    |                        |  
+ *     |                        |  
+ |     |                        |  
+ |     |                        |  
+ |     |        H               |  
+ |     |        H               |  
+ |     |                        |  
+ |     |                        |  
+ |     .------------------------.  
+ |    /                        /   
+ |   /                        /    
+ |  /                        /     
+ | /                        /      
+ |/                        /       
+ *------------------------*        
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      H | 5.000000 | 5.000000 | 5.745851 | ( 0.0000,  0.0000,  0.0000) |
+| 1 |      H | 4.990000 | 5.000000 | 4.991315 | ( 0.0000,  0.0000, -0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 10.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.737166 | 10.737166 | 90.000000 |
+
+
+Initialization done in: 1.481 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 1e-06 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 1e-06 electrons / valence electron
+- Maximum change in the atomic [forces] across last 2 cycles: 0.0001 eV/Ang OR
+Maximum error relative to the maximum force is below inf
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |force |  magmom |
+|---------|----------|-------------|-------|-------|------|---------|
+|iter:   1| 11:25:43 |   -6.652776 | -2.98 |       |      |  -0.0000|
+|iter:   2| 11:25:44 |   -6.652698 | -4.97 | -2.11 |      |  -0.0000|
+|iter:   3| 11:25:46 |   -6.652211 | -4.05 | -2.14 |      |  -0.0000|
+|iter:   4| 11:25:48 |   -6.652126 | -4.53 | -2.51 |      |  -0.0000|
+|iter:   5| 11:25:49 |   -6.652124 | -5.94 | -2.90 |      |  -0.0000|
+|iter:   6| 11:25:51 |   -6.652124c| -7.63c| -3.85 |      |  -0.0000|
+|iter:   7| 11:25:52 |   -6.652124c| -7.53c| -4.38 |      |  -0.0000|
+|iter:   8| 11:25:54 |   -6.652124c| -8.40c| -5.17 |      |  +0.0000|
+|iter:   9| 11:25:56 |   -6.652124c| -9.27c| -5.54 |      |  +0.0000|
+|iter:  10| 11:25:58 |   -6.652124c|-10.06c| -6.34c|-0.50 |  +0.0000|
+|iter:  11| 11:26:00 |   -6.652124c|-10.68c| -6.82c|-5.61c|  +0.0000|
+
+Converged in 11 steps
+SCF loop duration: 17.350 s (1.577 s/step)
+Energy contributions relative to reference atoms: (reference = -24.980324)
+
+Energy contributions:
+  Kinetic:           5.880016
+  Coulomb:          -7.592617
+  Zero:             -0.006384
+  External:          0.000000
+  Xc:               -4.933139
+  Entropy:          -0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -6.652124
+  Extrapolated:     -6.652124
+
+dipole moment: (-0.000001, 0.000000, -0.000000)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, 0.000000)
+
+Local magnetic moments
+|        x |        y |         z |
+|----------|----------|-----------|
+| 0.000000 | 0.000000 |  0.000000 |  # H    0
+| 0.000000 | 0.000000 | -0.000000 |  # H    1
+
+
+
+Fermi level: -4.739
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -10.265 |     1.000 |       -10.265 |     1.000 |
+|          1 |        -0.171 |     0.000 |        -0.171 |     0.000 |
+
+
+Gap: 10.094 eV
+Transition (v -> c):
+  (s=0, k=0, n=0, [0.00, 0.00, 0.00]) -> (s=0, k=0, n=1, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+Forces  # eV/Ang
+|        x |        y |        z |
+|----------|----------|----------|
+| -0.00014 | -0.00000 | -0.00128 |  # H    0
+| -0.00042 | -0.00000 |  0.00129 |  # H    1
+
+
+Force computation time: 0.000  # s
+       .------------------------.  
+      /|                        |  
+     / |                        |  
+    /  |                        |  
+   /   |                        |  
+  /    |                        |  
+ *     |                        |  
+ |     |                        |  
+ |     |                        |  
+ |     |        H               |  
+ |     |         H              |  
+ |     |                        |  
+ |     |                        |  
+ |     .------------------------.  
+ |    /                        /   
+ |   /                        /    
+ |  /                        /     
+ | /                        /      
+ |/                        /       
+ *------------------------*        
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      H | 5.000000 | 5.000000 | 5.745851 | ( 0.0000,  0.0000,  0.0000) |
+| 1 |      H | 5.010000 | 5.000000 | 4.991315 | ( 0.0000,  0.0000, -0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 10.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.737166 | 10.737166 | 90.000000 |
+
+
+Initialization done in: 1.442 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 1e-06 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 1e-06 electrons / valence electron
+- Maximum change in the atomic [forces] across last 2 cycles: 0.0001 eV/Ang OR
+Maximum error relative to the maximum force is below inf
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |force |  magmom |
+|---------|----------|-------------|-------|-------|------|---------|
+|iter:   1| 11:26:02 |   -6.652235 | -2.73 |       |      |  -0.0000|
+|iter:   2| 11:26:03 |   -6.652225 | -4.83 | -2.10 |      |  -0.0000|
+|iter:   3| 11:26:05 |   -6.652132 | -4.76 | -2.12 |      |  -0.0000|
+|iter:   4| 11:26:06 |   -6.652124 | -5.22 | -2.58 |      |  -0.0000|
+|iter:   5| 11:26:08 |   -6.652124 | -7.11 | -3.38 |      |  -0.0000|
+|iter:   6| 11:26:10 |   -6.652124c| -8.13c| -3.85 |      |  -0.0000|
+|iter:   7| 11:26:12 |   -6.652124c| -8.82c| -4.95 |      |  -0.0000|
+|iter:   8| 11:26:13 |   -6.652124c| -9.38c| -5.68 |      |  +0.0000|
+|iter:   9| 11:26:15 |   -6.652124c|-10.22c| -6.17c|-3.08 |  -0.0000|
+|iter:  10| 11:26:17 |   -6.652124c|-10.80c| -6.78c|-5.56c|  -0.0000|
+
+Converged in 10 steps
+SCF loop duration: 15.550 s (1.555 s/step)
+Energy contributions relative to reference atoms: (reference = -24.980324)
+
+Energy contributions:
+  Kinetic:           5.880016
+  Coulomb:          -7.592617
+  Zero:             -0.006384
+  External:          0.000000
+  Xc:               -4.933139
+  Entropy:          -0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -6.652124
+  Extrapolated:     -6.652124
+
+dipole moment: (0.000001, 0.000000, -0.000000)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, -0.000000)
+
+Local magnetic moments
+|        x |        y |         z |
+|----------|----------|-----------|
+| 0.000000 | 0.000000 | -0.000000 |  # H    0
+| 0.000000 | 0.000000 |  0.000000 |  # H    1
+
+
+
+Fermi level: -4.739
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -10.265 |     1.000 |       -10.265 |     1.000 |
+|          1 |        -0.171 |     0.000 |        -0.171 |     0.000 |
+
+
+Gap: 10.094 eV
+Transition (v -> c):
+  (s=1, k=0, n=0, [0.00, 0.00, 0.00]) -> (s=0, k=0, n=1, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+Forces  # eV/Ang
+|       x |        y |        z |
+|---------|----------|----------|
+| 0.00014 | -0.00000 | -0.00128 |  # H    0
+| 0.00042 | -0.00000 |  0.00129 |  # H    1
+
+
+Force computation time: 0.000  # s
+       .------------------------.  
+      /|                        |  
+     / |                        |  
+    /  |                        |  
+   /   |                        |  
+  /    |                        |  
+ *     |                        |  
+ |     |                        |  
+ |     |                        |  
+ |     |        H               |  
+ |     |        H               |  
+ |     |                        |  
+ |     |                        |  
+ |     .------------------------.  
+ |    /                        /   
+ |   /                        /    
+ |  /                        /     
+ | /                        /      
+ |/                        /       
+ *------------------------*        
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      H | 5.000000 | 5.000000 | 5.745851 | ( 0.0000,  0.0000, -0.0000) |
+| 1 |      H | 5.000000 | 4.990000 | 4.991315 | ( 0.0000,  0.0000,  0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 10.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.737166 | 10.737166 | 90.000000 |
+
+
+Initialization done in: 1.345 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 1e-06 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 1e-06 electrons / valence electron
+- Maximum change in the atomic [forces] across last 2 cycles: 0.0001 eV/Ang OR
+Maximum error relative to the maximum force is below inf
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |force |  magmom |
+|---------|----------|-------------|-------|-------|------|---------|
+|iter:   1| 11:26:18 |   -6.652180 | -3.03 |       |      |  -0.0000|
+|iter:   2| 11:26:20 |   -6.652174 | -5.13 | -2.26 |      |  -0.0000|
+|iter:   3| 11:26:21 |   -6.652128 | -5.07 | -2.28 |      |  -0.0000|
+|iter:   4| 11:26:23 |   -6.652124 | -5.52 | -2.73 |      |  +0.0000|
+|iter:   5| 11:26:24 |   -6.652124 | -7.47c| -3.52 |      |  -0.0000|
+|iter:   6| 11:26:26 |   -6.652124c| -8.40c| -3.95 |      |  +0.0000|
+|iter:   7| 11:26:28 |   -6.652124c| -9.45c| -5.20 |      |  +0.0000|
+|iter:   8| 11:26:29 |   -6.652124c| -9.78c| -5.80 |      |  -0.0000|
+|iter:   9| 11:26:31 |   -6.652124c|-10.53c| -6.19c|-3.23 |  +0.0000|
+|iter:  10| 11:26:33 |   -6.652124c|-11.34c| -6.71c|-5.32c|  +0.0000|
+
+Converged in 10 steps
+SCF loop duration: 14.258 s (1.426 s/step)
+Energy contributions relative to reference atoms: (reference = -24.980324)
+
+Energy contributions:
+  Kinetic:           5.880016
+  Coulomb:          -7.592617
+  Zero:             -0.006384
+  External:          0.000000
+  Xc:               -4.933139
+  Entropy:          -0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -6.652124
+  Extrapolated:     -6.652124
+
+dipole moment: (0.000000, -0.000001, 0.000000)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, 0.000000)
+
+Local magnetic moments
+|        x |        y |         z |
+|----------|----------|-----------|
+| 0.000000 | 0.000000 | -0.000000 |  # H    0
+| 0.000000 | 0.000000 |  0.000000 |  # H    1
+
+
+
+Fermi level: -4.739
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -10.265 |     1.000 |       -10.265 |     1.000 |
+|          1 |        -0.171 |     0.000 |        -0.171 |     0.000 |
+
+
+Gap: 10.094 eV
+Transition (v -> c):
+  (s=1, k=0, n=0, [0.00, 0.00, 0.00]) -> (s=1, k=0, n=1, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+Forces  # eV/Ang
+|       x |        y |        z |
+|---------|----------|----------|
+| 0.00000 | -0.00014 | -0.00129 |  # H    0
+| 0.00000 | -0.00042 |  0.00128 |  # H    1
+
+
+Force computation time: 0.000  # s
+       .------------------------.  
+      /|                        |  
+     / |                        |  
+    /  |                        |  
+   /   |                        |  
+  /    |                        |  
+ *     |                        |  
+ |     |                        |  
+ |     |                        |  
+ |     |        H               |  
+ |     |         H              |  
+ |     |                        |  
+ |     |                        |  
+ |     .------------------------.  
+ |    /                        /   
+ |   /                        /    
+ |  /                        /     
+ | /                        /      
+ |/                        /       
+ *------------------------*        
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      H | 5.000000 | 5.000000 | 5.745851 | ( 0.0000,  0.0000, -0.0000) |
+| 1 |      H | 5.000000 | 5.010000 | 4.991315 | ( 0.0000,  0.0000,  0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 10.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.737166 | 10.737166 | 90.000000 |
+
+
+Initialization done in: 1.366 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 1e-06 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 1e-06 electrons / valence electron
+- Maximum change in the atomic [forces] across last 2 cycles: 0.0001 eV/Ang OR
+Maximum error relative to the maximum force is below inf
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |force |  magmom |
+|---------|----------|-------------|-------|-------|------|---------|
+|iter:   1| 11:26:34 |   -6.652235 | -2.73 |       |      |  -0.0000|
+|iter:   2| 11:26:36 |   -6.652225 | -4.83 | -2.10 |      |  -0.0000|
+|iter:   3| 11:26:37 |   -6.652135 | -4.82 | -2.12 |      |  +0.0000|
+|iter:   4| 11:26:39 |   -6.652124 | -5.15 | -2.54 |      |  +0.0000|
+|iter:   5| 11:26:40 |   -6.652124 | -7.07 | -3.37 |      |  +0.0000|
+|iter:   6| 11:26:42 |   -6.652124c| -7.98c| -3.77 |      |  +0.0000|
+|iter:   7| 11:26:44 |   -6.652124c| -8.80c| -4.92 |      |  -0.0000|
+|iter:   8| 11:26:45 |   -6.652124c| -9.31c| -5.62 |      |  +0.0000|
+|iter:   9| 11:26:47 |   -6.652124c|-10.12c| -6.10c|-3.08 |  -0.0000|
+|iter:  10| 11:26:49 |   -6.652124c|-10.71c| -6.58c|-5.41c|  +0.0000|
+
+Converged in 10 steps
+SCF loop duration: 14.894 s (1.489 s/step)
+Energy contributions relative to reference atoms: (reference = -24.980324)
+
+Energy contributions:
+  Kinetic:           5.880016
+  Coulomb:          -7.592617
+  Zero:             -0.006384
+  External:          0.000000
+  Xc:               -4.933139
+  Entropy:          -0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -6.652124
+  Extrapolated:     -6.652124
+
+dipole moment: (0.000000, 0.000001, -0.000000)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, 0.000000)
+
+Local magnetic moments
+|        x |        y |         z |
+|----------|----------|-----------|
+| 0.000000 | 0.000000 | -0.000000 |  # H    0
+| 0.000000 | 0.000000 |  0.000000 |  # H    1
+
+
+
+Fermi level: -4.739
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -10.265 |     1.000 |       -10.265 |     1.000 |
+|          1 |        -0.171 |     0.000 |        -0.171 |     0.000 |
+
+
+Gap: 10.094 eV
+Transition (v -> c):
+  (s=1, k=0, n=0, [0.00, 0.00, 0.00]) -> (s=0, k=0, n=1, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+Forces  # eV/Ang
+|        x |       y |        z |
+|----------|---------|----------|
+| -0.00000 | 0.00014 | -0.00128 |  # H    0
+| -0.00000 | 0.00042 |  0.00129 |  # H    1
+
+
+Force computation time: 0.000  # s
+       .------------------------.  
+      /|                        |  
+     / |                        |  
+    /  |                        |  
+   /   |                        |  
+  /    |                        |  
+ *     |                        |  
+ |     |                        |  
+ |     |                        |  
+ |     |        H               |  
+ |     |        H               |  
+ |     |                        |  
+ |     |                        |  
+ |     .------------------------.  
+ |    /                        /   
+ |   /                        /    
+ |  /                        /     
+ | /                        /      
+ |/                        /       
+ *------------------------*        
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      H | 5.000000 | 5.000000 | 5.745851 | ( 0.0000,  0.0000, -0.0000) |
+| 1 |      H | 5.000000 | 5.000000 | 4.981315 | ( 0.0000,  0.0000,  0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 10.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.737166 | 10.737166 | 90.000000 |
+
+
+Initialization done in: 1.318 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 1e-06 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 1e-06 electrons / valence electron
+- Maximum change in the atomic [forces] across last 2 cycles: 0.0001 eV/Ang OR
+Maximum error relative to the maximum force is below inf
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |force |  magmom |
+|---------|----------|-------------|-------|-------|------|---------|
+|iter:   1| 11:26:50 |   -6.651159 | -2.95 |       |      |  +0.0000|
+|iter:   2| 11:26:52 |   -6.651082 | -4.91 | -2.07 |      |  +0.0000|
+|iter:   3| 11:26:53 |   -6.650599 | -4.04 | -2.10 |      |  +0.0000|
+|iter:   4| 11:26:55 |   -6.650517 | -4.54 | -2.48 |      |  +0.0000|
+|iter:   5| 11:26:56 |   -6.650515 | -5.84 | -2.91 |      |  +0.0000|
+|iter:   6| 11:26:58 |   -6.650515 | -7.43c| -3.81 |      |  +0.0000|
+|iter:   7| 11:27:00 |   -6.650515c| -7.44c| -4.35 |      |  +0.0000|
+|iter:   8| 11:27:01 |   -6.650515c| -8.33c| -5.16 |      |  +0.0000|
+|iter:   9| 11:27:03 |   -6.650515c| -9.10c| -5.54 |      |  +0.0000|
+|iter:  10| 11:27:05 |   -6.650515c| -9.90c| -6.34c|-0.50 |  +0.0000|
+|iter:  11| 11:27:07 |   -6.650515c|-10.48c| -6.81c|-5.62c|  -0.0000|
+
+Converged in 11 steps
+SCF loop duration: 16.996 s (1.545 s/step)
+Energy contributions relative to reference atoms: (reference = -24.980324)
+
+Energy contributions:
+  Kinetic:           5.635740
+  Coulomb:          -7.429852
+  Zero:             -0.006479
+  External:          0.000000
+  Xc:               -4.849924
+  Entropy:           0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -6.650515
+  Extrapolated:     -6.650515
+
+dipole moment: (-0.000000, -0.000000, 0.000001)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, -0.000000)
+
+Local magnetic moments
+|        x |        y |         z |
+|----------|----------|-----------|
+| 0.000000 | 0.000000 |  0.000000 |  # H    0
+| 0.000000 | 0.000000 | -0.000000 |  # H    1
+
+
+
+Fermi level: -4.739
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -10.218 |     1.000 |       -10.218 |     1.000 |
+|          1 |        -0.172 |     0.000 |        -0.172 |     0.000 |
+
+
+Gap: 10.046 eV
+Transition (v -> c):
+  (s=0, k=0, n=0, [0.00, 0.00, 0.00]) -> (s=1, k=0, n=1, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+Forces  # eV/Ang
+|       x |       y |        z |
+|---------|---------|----------|
+| 0.00000 | 0.00000 | -0.31885 |  # H    0
+| 0.00000 | 0.00000 |  0.31882 |  # H    1
+
+
+Force computation time: 0.000  # s
+       .------------------------.  
+      /|                        |  
+     / |                        |  
+    /  |                        |  
+   /   |                        |  
+  /    |                        |  
+ *     |                        |  
+ |     |                        |  
+ |     |                        |  
+ |     |        H               |  
+ |     |        H               |  
+ |     |                        |  
+ |     |                        |  
+ |     .------------------------.  
+ |    /                        /   
+ |   /                        /    
+ |  /                        /     
+ | /                        /      
+ |/                        /       
+ *------------------------*        
+
+Atoms  # Å, Bohr magnetons
+|   | symbol |        x |        y |        z |    initial magnetic moments |
+|---|--------|----------|----------|----------|-----------------------------|
+| 0 |      H | 5.000000 | 5.000000 | 5.745851 | ( 0.0000,  0.0000,  0.0000) |
+| 1 |      H | 5.000000 | 5.000000 | 5.001315 | ( 0.0000,  0.0000, -0.0000) |
+
+
+Unit cell  # Å
+| periodic |         x |         y |         z |   lengths |    angles |
+|----------|-----------|-----------|-----------|-----------|-----------|
+|      yes | 10.000000 |  0.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 | 10.000000 |  0.000000 | 10.000000 | 90.000000 |
+|      yes |  0.000000 |  0.000000 | 10.737166 | 10.737166 | 90.000000 |
+
+
+Initialization done in: 1.450 s
+
+convergence criteria:
+- Maximum [total energy] change in last 3 cyles: 1e-06 eV / valence electron
+- Maximum integral of absolute [dens]ity change: 1e-06 electrons / valence electron
+- Maximum change in the atomic [forces] across last 2 cycles: 0.0001 eV/Ang OR
+Maximum error relative to the maximum force is below inf
+- Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+maximum number of iterations: 333
+
+SCF iterations
+|iter     |     time |      energy | eigst |  dens |force |  magmom |
+|---------|----------|-------------|-------|-------|------|---------|
+|iter:   1| 11:27:09 |   -6.652943 | -2.65 |       |      |  +0.0000|
+|iter:   2| 11:27:10 |   -6.652637 | -4.56 | -1.84 |      |  +0.0000|
+|iter:   3| 11:27:12 |   -6.650730 | -3.45 | -1.86 |      |  -0.0000|
+|iter:   4| 11:27:14 |   -6.650433 | -4.02 | -2.24 |      |  -0.0000|
+|iter:   5| 11:27:16 |   -6.650426 | -5.54 | -2.64 |      |  -0.0000|
+|iter:   6| 11:27:17 |   -6.650426 | -7.15 | -3.64 |      |  -0.0000|
+|iter:   7| 11:27:19 |   -6.650426c| -7.99c| -4.21 |      |  +0.0000|
+|iter:   8| 11:27:21 |   -6.650426c| -8.86c| -4.91 |      |  +0.0000|
+|iter:   9| 11:27:22 |   -6.650426c| -9.57c| -5.34 |      |  -0.0000|
+|iter:  10| 11:27:24 |   -6.650426c|-10.28c| -6.29c|-0.18 |  -0.0000|
+|iter:  11| 11:27:26 |   -6.650426c|-11.06c| -6.57c|-5.19c|  +0.0000|
+
+Converged in 11 steps
+SCF loop duration: 17.793 s (1.618 s/step)
+Energy contributions relative to reference atoms: (reference = -24.980324)
+
+Energy contributions:
+  Kinetic:           6.133896
+  Coulomb:          -7.759334
+  Zero:             -0.006281
+  External:          0.000000
+  Xc:               -5.018707
+  Entropy:          -0.000000
+  Spinorbit:         0.000000
+  ----------------------------
+  Free energy:      -6.650426
+  Extrapolated:     -6.650426
+
+dipole moment: (-0.000000, -0.000000, -0.000001)  # |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, 0.000000)
+
+Local magnetic moments
+|        x |        y |         z |
+|----------|----------|-----------|
+| 0.000000 | 0.000000 | -0.000000 |  # H    0
+| 0.000000 | 0.000000 | -0.000000 |  # H    1
+
+
+
+Fermi level: -4.739
+Eigenvalues  # (at kpt = [0.000, 0.000, 0.000])
+| band index |      eig [eV] | occ [0-1] |      eig [eV] | occ [0-1] |
+|------------|---------------|-----------|---------------|-----------|
+|          0 |       -10.313 |     1.000 |       -10.313 |     1.000 |
+|          1 |        -0.170 |     0.000 |        -0.170 |     0.000 |
+
+
+Gap: 10.143 eV
+Transition (v -> c):
+  (s=1, k=0, n=0, [0.00, 0.00, 0.00]) -> (s=0, k=0, n=1, [0.00, 0.00, 0.00])
+No difference between direct/indirect transitions
+
+Forces  # eV/Ang
+|       x |       y |        z |
+|---------|---------|----------|
+| 0.00000 | 0.00000 |  0.34204 |  # H    0
+| 0.00000 | 0.00000 | -0.34202 |  # H    1
+
+
+Force computation time: 0.000  # s
+
+timing:  # [seconds]
+  Total:  252.831  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Init:     1.881  # ╸
+  Forces:   9.623  # ━━
+  SCF:    231.791  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
+  Move:    18.901  # ━━━━

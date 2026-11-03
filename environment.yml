@@ -1,0 +1,14 @@
+# Environment used for all calculations and analysis (versions as run).
+name: gpaw-run
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - gpaw=26.7.0
+  - ase=3.29.0
+  - numpy=2.4.6
+  - scipy=1.17.1
+  - matplotlib=3.11.1
+  - pillow=12.3.0
+# Optional:
+#   MACE-MP-0 pre-relaxation (step 0): a separate env with mace-torch
+#   Structure renders (code/render/): OVITO 3.17 Python module (pip install ovito)
